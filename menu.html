@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - H&H Foods</title>
+    <link rel="icon" href="pics/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand ms-3" href="#">
+                    <img src="pics/logo.png" alt="Logo" height="50">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="nav-link cart-icon me-3" href="cart.html">
+                    <i class="bi bi-cart"></i>
+                </a>
+            </div>
+        </nav>
+        <h1 class="menu-heading">Our Menu</h1>
+        <!-- Navigation Buttons -->
+        <div class="button-container">
+            <a class="category-button" href="#cakes">Cakes</a>
+            <a class="category-button" href="#brownies">Brownies</a>
+            <a class="category-button" href="#cupcakes">Cupcakes</a>
+            <a class="category-button" href="#tea-time-cakes">Tea-time Cakes</a>
+            <a class="category-button" href="#pastas">Pastas</a>
+            <a class="category-button" href="#pastries">Pastries</a>
+            <a class="category-button" href="#savouries">Savouries</a>
+            <a class="category-button" href="#side-orders">Side Orders</a>
+          </div>
+          
+   
+    </header>
+    <main>
+        <div id="menu-container">
+            <div class="container">
+            <h2 id="cakes" class="category-header">Cakes </h2>
+            <div class="category-container" data-category="cakes">
+            </div>
+        </div>
+        <div class="container">
+            <h2 id="brownies" class="category-header">Brownies</h2>
+            <div class="category-container" data-category="brownies">
+                <!-- Brownie items will be dynamically inserted here -->
+            </div>
+        </div>
+        <div  class="container">
+            <h2 id="cupcakes" class="category-header">Cupcakes</h2>
+            <div class="category-container" data-category="cupcakes">
+                <!-- Cupcake items will be dynamically inserted here -->
+            </div>
+        </div>
+        <div  class="container">
+            <h2 id="tea-time-cakes" class="category-header">Tea-time Cakes</h2>
+            <div class="category-container" data-category="tea-time-cakes">
+                <!-- Tea-time cakes items will be dynamically inserted here -->
+            </div>
+        </div>
+        <div  class="container">
+            <h2 id="pastas" class="category-header">Pastas</h2>
+            <div class="category-container" data-category="pastas">
+                <!-- Pasta items will be dynamically inserted here -->
+            </div>
+        </div>
+        <div  class="container">
+            <h2 id="pastries" class="category-header">Pastries</h2>
+            <div class="category-container" data-category="pastries">
+                <!-- Pastry items will be dynamically inserted here -->
+            </div>
+        </div>
+        <div  class="container">
+            <h2 id="savouries" class="category-header">Savouries</h2>
+            <div class="category-container" data-category="savouries">
+                <!-- Savoury items will be dynamically inserted here -->
+            </div>
+        </div>
+        <div  class="container">
+            <h2 id="side-orders" class="category-header">Side Orders </h2>
+            <div class="category-container" data-category="side-orders">
+                <!-- Side orders items will be dynamically inserted here -->
+            </div>
+        </div>
+        </div>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="firebase-config.js"></script>
+    <footer>
+      <div class="footer-content container">
+        <div class="row">
+          <div class="col-md-4 footer-section about">
+            <h1>Company</h1>
+            <p>H&H Foods, your trusted bakery in Bahawalpur, is dedicated to bringing joy and sweetness to every occasion.</p>
+          </div>
+          <div class="col-md-4 footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Address: 123 Main Street, Bahawalpur</p>
+            <p>Phone: +92 3015151177</p>
+            <p>Email: info@hhfoods.com</p>
+            <h2>Follow Us</h2>
+            <div class="socials">
+              <a href="https://www.facebook.com/share/adk6qoLSq6Fugo2B/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/tempting_flavours13?igsh=MXJ6ZDlqaHF1b3RsMA==" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+          </div>
+          <div class="col-md-4 footer-section">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+              <div class="input-group mb-3">
+                <span class="input-group-text">Name</span>
+                <input type="text" class="form-control" name="name" placeholder="Your name..." aria-label="Name">
+              </div>
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" name="email" placeholder="Your email..." aria-label="Email">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">Message</span>
+                <textarea class="form-control" name="message" placeholder="Your message..."></textarea>
+              </div>
+              <input type="submit" class="btn btn-primary" value="Send">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center mt-4">
+        <h2>Terms & Conditions</h2>
+        <p class="terms">
+          Delivery is all over Bahawalpur at a fixed cost of PKR 200. <strong>Please note:</strong> Frozen items should be ordered one day before delivery.
+        </p>
+        <p>For orders and inquiries, please call us at: +92 3015151177</p>
+        <p>&copy; 2024 H&H Foods. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="firebase-config.js"></script>
+
+<script src="send-email.js"></script>
+    <script src="menu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>
